@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the site
+Disallow:
+
+# Sitemap location
+Sitemap: https://grajalescleaning.com/sitemap.xml
+
+# Crawl delay (optional - be respectful to search engines)
+Crawl-delay: 1

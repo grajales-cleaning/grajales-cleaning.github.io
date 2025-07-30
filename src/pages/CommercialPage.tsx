@@ -108,9 +108,11 @@ const CommercialPage = () => {
 
   return (
     <div 
-      className="min-h-screen relative bg-cover bg-center bg-no-repeat"
+      className="min-h-screen relative bg-cover bg-center bg-no-repeat bg-fixed"
       style={{
-        backgroundImage: `url('/commercial.png')`
+        backgroundImage: `url('/commercial.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
       }}
     >
       {/* Background overlay for better text readability */}

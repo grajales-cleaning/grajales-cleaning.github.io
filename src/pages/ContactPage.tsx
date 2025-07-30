@@ -3,9 +3,11 @@ import ContactForm from '../components/ContactForm'
 const ContactPage = () => {
   return (
     <div 
-      className="min-h-screen relative bg-cover bg-center bg-no-repeat"
+      className="min-h-screen relative bg-cover bg-center bg-no-repeat bg-fixed"
       style={{
-        backgroundImage: `url('/cleaning_crew.jpg')`
+        backgroundImage: `url('/cleaning_crew.jpg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
       }}
     >
       {/* Background overlay for better text readability */}

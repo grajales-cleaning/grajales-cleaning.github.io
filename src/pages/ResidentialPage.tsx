@@ -97,13 +97,9 @@ const ResidentialPage = () => {
 
   return (
     <div 
-      className="min-h-screen relative"
+      className="min-h-screen relative bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('/residential.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-        backgroundRepeat: 'no-repeat'
+        backgroundImage: `url('/residential.png')`
       }}
     >
       {/* Background overlay for better text readability */}

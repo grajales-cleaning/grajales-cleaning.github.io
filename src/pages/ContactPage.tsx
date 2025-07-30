@@ -2,14 +2,33 @@ import ContactForm from '../components/ContactForm'
 
 const ContactPage = () => {
   return (
-    <div 
-      className="min-h-screen relative bg-cover bg-center bg-no-repeat bg-fixed"
-      style={{
-        backgroundImage: `url('/cleaning_crew.jpg')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
-    >
+    <>
+      <style>{`
+        .contact-bg {
+          background-image: url('/cleaning_crew.jpg');
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+        }
+        @media (max-width: 640px) {
+          .contact-bg {
+            background-size: auto 120vh;
+            background-position: center center;
+          }
+        }
+        @media (min-width: 641px) and (max-width: 1024px) {
+          .contact-bg {
+            background-size: auto 100vh;
+            background-position: center center;
+          }
+        }
+        @media (min-width: 1025px) {
+          .contact-bg {
+            background-size: cover;
+            background-position: center center;
+          }
+        }
+      `}</style>
+      <div className="min-h-screen relative contact-bg">
       {/* Background overlay for better text readability */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>
       
@@ -191,6 +210,7 @@ const ContactPage = () => {
         </section>
       </div>
     </div>
+    </>
   )
 }
 

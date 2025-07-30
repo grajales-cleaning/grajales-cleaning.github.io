@@ -22,14 +22,33 @@ const HomePage = () => {
   ]
 
   return (
-    <div 
-      className="min-h-screen relative bg-cover bg-center bg-no-repeat bg-fixed"
-      style={{
-        backgroundImage: `url('/cleaning_crew.jpg')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
-    >
+    <>
+      <style>{`
+        .hero-bg {
+          background-image: url('/cleaning_crew.jpg');
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+        }
+        @media (max-width: 640px) {
+          .hero-bg {
+            background-size: auto 120vh;
+            background-position: center center;
+          }
+        }
+        @media (min-width: 641px) and (max-width: 1024px) {
+          .hero-bg {
+            background-size: auto 100vh;
+            background-position: center center;
+          }
+        }
+        @media (min-width: 1025px) {
+          .hero-bg {
+            background-size: cover;
+            background-position: center center;
+          }
+        }
+      `}</style>
+      <div className="min-h-screen relative hero-bg">
       {/* Background overlay for better text readability */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>
       
@@ -186,6 +205,7 @@ const HomePage = () => {
       </section>
       </div>
     </div>
+    </>
   )
 }
 

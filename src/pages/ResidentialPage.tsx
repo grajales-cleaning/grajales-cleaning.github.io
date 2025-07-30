@@ -96,14 +96,33 @@ const ResidentialPage = () => {
   ]
 
   return (
-    <div 
-      className="min-h-screen relative bg-cover bg-center bg-no-repeat bg-fixed"
-      style={{
-        backgroundImage: `url('/residential.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
-    >
+    <>
+      <style>{`
+        .residential-bg {
+          background-image: url('/residential.png');
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+        }
+        @media (max-width: 640px) {
+          .residential-bg {
+            background-size: auto 120vh;
+            background-position: center center;
+          }
+        }
+        @media (min-width: 641px) and (max-width: 1024px) {
+          .residential-bg {
+            background-size: auto 100vh;
+            background-position: center center;
+          }
+        }
+        @media (min-width: 1025px) {
+          .residential-bg {
+            background-size: cover;
+            background-position: center center;
+          }
+        }
+      `}</style>
+      <div className="min-h-screen relative residential-bg">
       {/* Background overlay for better text readability */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>
       
@@ -240,6 +259,7 @@ const ResidentialPage = () => {
         </section>
       </div>
     </div>
+    </>
   )
 }
 

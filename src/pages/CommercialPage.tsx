@@ -107,14 +107,33 @@ const CommercialPage = () => {
   ]
 
   return (
-    <div 
-      className="min-h-screen relative bg-cover bg-center bg-no-repeat bg-fixed"
-      style={{
-        backgroundImage: `url('/commercial.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center'
-      }}
-    >
+    <>
+      <style>{`
+        .commercial-bg {
+          background-image: url('/commercial.png');
+          background-attachment: fixed;
+          background-repeat: no-repeat;
+        }
+        @media (max-width: 640px) {
+          .commercial-bg {
+            background-size: auto 120vh;
+            background-position: center center;
+          }
+        }
+        @media (min-width: 641px) and (max-width: 1024px) {
+          .commercial-bg {
+            background-size: auto 100vh;
+            background-position: center center;
+          }
+        }
+        @media (min-width: 1025px) {
+          .commercial-bg {
+            background-size: cover;
+            background-position: center center;
+          }
+        }
+      `}</style>
+      <div className="min-h-screen relative commercial-bg">
       {/* Background overlay for better text readability */}
       <div className="absolute inset-0 bg-black/40 z-0"></div>
       
@@ -285,6 +304,7 @@ const CommercialPage = () => {
         </section>
       </div>
     </div>
+    </>
   )
 }
 

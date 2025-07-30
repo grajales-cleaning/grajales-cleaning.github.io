@@ -26,23 +26,20 @@ const HomePage = () => {
       <style>{`
         .hero-bg {
           background-image: url('/cleaning_crew.jpg');
-          background-attachment: fixed;
           background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
         }
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
           .hero-bg {
-            background-size: auto 120vh;
+            background-attachment: scroll;
+            background-size: cover;
             background-position: center center;
           }
         }
-        @media (min-width: 641px) and (max-width: 1024px) {
+        @media (min-width: 769px) {
           .hero-bg {
-            background-size: auto 100vh;
-            background-position: center center;
-          }
-        }
-        @media (min-width: 1025px) {
-          .hero-bg {
+            background-attachment: fixed;
             background-size: cover;
             background-position: center center;
           }

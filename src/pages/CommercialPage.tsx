@@ -111,23 +111,20 @@ const CommercialPage = () => {
       <style>{`
         .commercial-bg {
           background-image: url('/commercial.png');
-          background-attachment: fixed;
           background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
         }
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
           .commercial-bg {
-            background-size: auto 120vh;
+            background-attachment: scroll;
+            background-size: cover;
             background-position: center center;
           }
         }
-        @media (min-width: 641px) and (max-width: 1024px) {
+        @media (min-width: 769px) {
           .commercial-bg {
-            background-size: auto 100vh;
-            background-position: center center;
-          }
-        }
-        @media (min-width: 1025px) {
-          .commercial-bg {
+            background-attachment: fixed;
             background-size: cover;
             background-position: center center;
           }

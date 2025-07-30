@@ -5,16 +5,15 @@ const ContactPage = () => {
     <>
       <style>{`
         .contact-bg {
-          background-image: url('/cleaning_crew.jpg');
+          background-image: url('/cleaning_crew.webp');
           background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center center;
         }
         @media (max-width: 768px) {
           .contact-bg {
             background-attachment: scroll;
-            background-size: cover;
-            background-position: center center;
+            background-size: 100% auto;
+            background-position: top center;
+            min-height: 100vh;
           }
         }
         @media (min-width: 769px) {

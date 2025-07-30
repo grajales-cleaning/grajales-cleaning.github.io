@@ -99,16 +99,15 @@ const ResidentialPage = () => {
     <>
       <style>{`
         .residential-bg {
-          background-image: url('/residential.png');
+          background-image: url('/residential.webp');
           background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center center;
         }
         @media (max-width: 768px) {
           .residential-bg {
             background-attachment: scroll;
-            background-size: cover;
-            background-position: center center;
+            background-size: 100% auto;
+            background-position: top center;
+            min-height: 100vh;
           }
         }
         @media (min-width: 769px) {

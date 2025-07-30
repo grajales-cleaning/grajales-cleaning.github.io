@@ -61,14 +61,13 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
         .hero-bg {
           background-image: url('/cleaning_crew.jpg');
           background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center center;
         }
         @media (max-width: 768px) {
           .hero-bg {
             background-attachment: scroll;
-            background-size: cover;
-            background-position: center center;
+            background-size: 100% auto;
+            background-position: top center;
+            min-height: 100vh;
           }
         }
         @media (min-width: 769px) {
@@ -82,14 +81,13 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
         .residential-bg {
           background-image: url('/residential.png');
           background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center center;
         }
         @media (max-width: 768px) {
           .residential-bg {
             background-attachment: scroll;
-            background-size: cover;
-            background-position: center center;
+            background-size: 100% auto;
+            background-position: top center;
+            min-height: 100vh;
           }
         }
         @media (min-width: 769px) {
@@ -103,14 +101,13 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
         .commercial-bg {
           background-image: url('/commercial.png');
           background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center center;
         }
         @media (max-width: 768px) {
           .commercial-bg {
             background-attachment: scroll;
-            background-size: cover;
-            background-position: center center;
+            background-size: 100% auto;
+            background-position: top center;
+            min-height: 100vh;
           }
         }
         @media (min-width: 769px) {
@@ -128,14 +125,13 @@ Please change the parent <Route path="${U}"> to <Route path="${U==="/"?"*":`${U}
         .contact-bg {
           background-image: url('/cleaning_crew.jpg');
           background-repeat: no-repeat;
-          background-size: cover;
-          background-position: center center;
         }
         @media (max-width: 768px) {
           .contact-bg {
             background-attachment: scroll;
-            background-size: cover;
-            background-position: center center;
+            background-size: 100% auto;
+            background-position: top center;
+            min-height: 100vh;
           }
         }
         @media (min-width: 769px) {

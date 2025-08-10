@@ -62,36 +62,6 @@ const ResidentialPage = () => {
         "Window and surface polishing",
         "Safe debris disposal"
       ]
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
-        </svg>
-      ),
-      title: "Carpet & Upholstery Cleaning",
-      description: "Professional deep cleaning to extend the life of your carpets and furniture.",
-      features: [
-        "Hot water extraction method",
-        "Stain and odor removal",
-        "Furniture and upholstery cleaning",
-        "Fast drying techniques"
-      ]
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-        </svg>
-      ),
-      title: "Window Cleaning",
-      description: "Crystal clear windows inside and out for maximum natural light.",
-      features: [
-        "Interior and exterior cleaning",
-        "Screen cleaning included",
-        "Streak-free guarantee",
-        "High windows safely accessed"
-      ]
     }
   ]
 

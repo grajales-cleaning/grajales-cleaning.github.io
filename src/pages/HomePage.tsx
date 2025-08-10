@@ -60,42 +60,28 @@ const HomePage = () => {
               Our Professional Cleaning Services in Louisville, KY
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From residential homes to commercial buildings throughout Louisville and Kentucky, we provide comprehensive cleaning solutions tailored to your needs with professional maid service you can trust.
+              We provide comprehensive residential cleaning solutions throughout Louisville and Kentucky with professional maid service you can trust.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <ServiceCard
-              icon={
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
-                </svg>
-              }
-              title="Residential House Cleaning Louisville"
-              description="Keep your Louisville home pristine with our comprehensive residential cleaning services. We handle everything from regular house cleaning maintenance to deep cleaning throughout Kentucky."
-              features={[
-                "Regular house cleaning",
-                "Deep cleaning services",
-                "Move in/out cleaning",
-                "Eco-friendly products"
-              ]}
-            />
-            
-            <ServiceCard
-              icon={
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm3 1h6v4H7V5zm6 6H7v2h6v-2z" clipRule="evenodd" />
-                </svg>
-              }
-              title="Commercial Office Cleaning Louisville"
-              description="Professional office cleaning solutions for Louisville businesses of all sizes. We ensure your workspace remains clean, healthy, and productive throughout Kentucky."
-              features={[
-                "Office cleaning",
-                "Retail & restaurant cleaning",
-                "Medical facility sanitization",
-                "Flexible scheduling"
-              ]}
-            />
+          <div className="flex justify-center">
+            <div className="max-w-md">
+              <ServiceCard
+                icon={
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                  </svg>
+                }
+                title="Residential House Cleaning Louisville"
+                description="Keep your Louisville home pristine with our comprehensive residential cleaning services. We handle everything from regular house cleaning maintenance to deep cleaning throughout Kentucky."
+                features={[
+                  "Regular house cleaning",
+                  "Deep cleaning services",
+                  "Move in/out cleaning",
+                  "Eco-friendly products"
+                ]}
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -180,8 +166,18 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-primary-600">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-16 relative overflow-hidden">
+        {/* Background image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: "url('/cleaning_crew.webp')" }}
+        ></div>
+        
+        {/* Blur overlay */}
+        <div className="absolute inset-0 backdrop-blur-sm bg-primary-600/80"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready for a Cleaner Space?
           </h2>

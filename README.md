@@ -78,11 +78,64 @@ src/
 
 ## Deployment
 
-The site is automatically deployed to GitHub Pages when changes are pushed to the main branch. To manually deploy:
+This project is configured for deployment to GitHub Pages using the `gh-pages` package.
+
+### Prerequisites for Deployment
+
+1. **GitHub CLI Authentication** (recommended):
+   ```bash
+   # Install GitHub CLI if not already installed
+   # macOS: brew install gh
+   # Windows: Download from https://cli.github.com/
+   
+   # Authenticate with GitHub
+   gh auth login
+   ```
+
+2. **Alternative: SSH/Personal Access Token**:
+   - Ensure your local Git is configured with SSH keys or a personal access token
+   - GitHub repository must have Pages enabled
+
+### Deployment Process
+
+The deployment uses a two-branch approach:
+- **`main` branch**: Contains your source code
+- **`gh-pages` branch**: Contains the built static files (auto-created)
+
+### Manual Deployment
+
+From the main branch, run:
 
 ```bash
 npm run deploy
 ```
+
+This command will:
+1. Run `npm run build` to create the production build
+2. Deploy the `dist/` folder contents to the `gh-pages` branch
+3. Push to GitHub, triggering the Pages deployment
+
+### GitHub Pages Configuration
+
+1. Go to your repository settings on GitHub
+2. Navigate to **Pages** section
+3. Set source to "Deploy from a branch"
+4. Select `gh-pages` branch and `/ (root)` folder
+5. Your site will be available at: `https://[username].github.io/[repository-name]`
+
+### Deployment Notes
+
+- The site uses HashRouter for client-side routing compatibility with GitHub Pages
+- The `public/CNAME` file configures custom domain (if applicable)
+- Changes to the main branch can be deployed anytime with `npm run deploy`
+- First-time setup may take a few minutes for GitHub Pages to activate
+
+### Troubleshooting Deployment
+
+- Ensure you have push permissions to the repository
+- Check that GitHub Pages is enabled in repository settings
+- Verify authentication: `gh auth status`
+- For permission issues, ensure your GitHub account has access to the repository
 
 ## License
 

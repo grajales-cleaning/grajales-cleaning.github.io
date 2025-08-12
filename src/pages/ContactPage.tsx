@@ -1,4 +1,5 @@
 import ContactForm from '../components/ContactForm'
+import ReviewForm from '../components/ReviewForm'
 
 const ContactPage = () => {
   return (
@@ -174,8 +175,15 @@ const ContactPage = () => {
         </div>
       </section>
 
-        {/* FAQ Section */}
+        {/* Review Section */}
         <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ReviewForm />
+        </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
             Frequently Asked Questions

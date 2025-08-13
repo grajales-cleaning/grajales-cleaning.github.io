@@ -2,6 +2,13 @@ import { useState } from 'react';
 import { Star } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
+interface FormData {
+  name: string;
+  email: string;
+  rating: number;
+  review: string;
+}
+
 // To configure EmailJS:
 // 1. Go to your EmailJS dashboard → Email Templates
 // 2. Create a new template with ID 'template_review'
@@ -12,8 +19,8 @@ import emailjs from '@emailjs/browser';
 //          Rating: {{rating}} stars
 //          Review: {{message}}
 
-function ReviewForm() {
-  const [formData, setFormData] = useState({
+const ReviewForm = () => {
+  const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     rating: 5,
@@ -24,7 +31,7 @@ function ReviewForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -32,14 +39,14 @@ function ReviewForm() {
     }));
   };
 
-  const handleRatingClick = (rating) => {
+  const handleRatingClick = (rating: number) => {
     setFormData(prev => ({
       ...prev,
       rating
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 

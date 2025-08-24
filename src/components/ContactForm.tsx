@@ -283,7 +283,7 @@ const ContactForm = () => {
               </svg>
               <div>
                 <p className="font-semibold">Oops! Something went wrong.</p>
-                <p className="text-sm">Please try again or call us directly at (555) 123-4567.</p>
+                <p className="text-sm">Please try again or contact us directly.</p>
               </div>
             </div>
           </div>

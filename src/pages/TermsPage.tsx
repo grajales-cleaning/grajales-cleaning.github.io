@@ -161,9 +161,6 @@ const TermsPage = () => {
                 <p className="text-gray-700 mb-2">
                   Email: <a href="mailto:info@grajalescleaning.com" className="text-primary-600 hover:text-primary-700">info@grajalescleaning.com</a>
                 </p>
-                <p className="text-gray-700 mb-2">
-                  Phone: <a href="tel:+15551234567" className="text-primary-600 hover:text-primary-700">(555) 123-4567</a>
-                </p>
                 <p className="text-gray-700">
                   Address: Louisville, KY
                 </p>

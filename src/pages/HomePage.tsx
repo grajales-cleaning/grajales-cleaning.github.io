@@ -5,19 +5,19 @@ import { Link } from 'react-router-dom'
 const HomePage = () => {
   const testimonials = [
     {
-      text: "Grajales Mgmt & Cleaning Co. transformed our office space. Professional, reliable, and thorough!",
-      author: "Sarah Johnson",
-      role: "Office Manager"
+      text: "We have been using Grajales Cleaning for about 10 years now. Eliana is friendly, personable, dependable, trustworthy and thorough. She is always receptive and willing to tackle any additional areas that we typically don't have done weekly when requested. I would definitely recommend Eliana & her team.",
+      author: "Brittany H.",
+      role: "Customer"
     },
     {
-      text: "I've been using their residential services for 2 years. Always exceed my expectations.",
-      author: "Michael Chen",
-      role: "Homeowner"
+      text: "5 stars! They do an excellent job and are extremely thorough and professional. My house never looked cleaner and I have 2 giant dogs, so my house gets filthy! I cannot recommend enough.",
+      author: "Hilary W.",
+      role: "Customer"
     },
     {
-      text: "The best cleaning service in town. Their attention to detail is remarkable.",
-      author: "Emily Rodriguez",
-      role: "Property Manager"
+      text: "We've used Grajales for 13 years, she cleans year round every week and never misses a cleaning. We'll continue using this service as long as she's in business!",
+      author: "Clay J.",
+      role: "Customer"
     }
   ]
 
